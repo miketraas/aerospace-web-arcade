@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="crt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AeroArcade — Links</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="brand">AeroArcade</div>
+    <a href="index.html">Home</a>
+    <a href="links.html">Links</a>
+    <a href="news.html">News</a>
+    <a href="game.html">Asteroids</a>
+  </div>
+
+  <div class="hero">
+    <div class="h1">Links (grouped + sourced)</div>
+    <p class="p">Official pages where possible. Each link is the primary source for that entity’s presence.</p>
+  </div>
+
+  <div id="content" class="grid"></div>
+
+  <div class="card" style="margin-top:14px">
+    <h2>Sources / methodology</h2>
+    <div id="sources" class="small"></div>
+  </div>
+
+  <div class="footer">Edit lists in <code>assets/links-data.js</code>.</div>
+</div>
+
+<script type="module">
+  import { sources, majorRocketCompanies, startupRocketCompanies, journalists, influencers } from './assets/links-data.js';
+
+  const content = document.getElementById('content');
+  const card = (title, items=[]) => {
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = `<h2>${title}</h2>` + (items.length
+      ? `<ul class="list">${items.map(i=>`<li><a href="${i.url}" target="_blank" rel="noopener">${i.name}</a></li>`).join('')}</ul>`
+      : `<div class="small">No entries.</div>`);
+    return el;
+  };
+
+  content.appendChild(card("Major established rocket organizations", majorRocketCompanies));
+  content.appendChild(card("Minor / startup launch companies", startupRocketCompanies));
+
+  content.appendChild(card("Major journalists — YouTube", journalists.major.youtube || []));
+  content.appendChild(card("Major journalists — X", journalists.major.x || []));
+  content.appendChild(card("Major journalists — Patreon", journalists.major.patreon || []));
+
+  content.appendChild(card("Major influencers — YouTube", influencers.major.youtube));
+  content.appendChild(card("Major influencers — X", influencers.major.x));
+  content.appendChild(card("Major influencers — Patreon", influencers.major.patreon));
+
+  content.appendChild(card("Obscure influencers — YouTube", influencers.obscure.youtube));
+  content.appendChild(card("Obscure influencers — X", influencers.obscure.x));
+  content.appendChild(card("Obscure influencers — Patreon", influencers.obscure.patreon));
+
+  document.getElementById('sources').innerHTML =
+    `<ul class="list">${sources.methodology.map(s=>`<li><a href="${s.url}" target="_blank" rel="noopener">${s.name}</a></li>`).join('')}</ul>`;
+</script>
+</body>
+</html>

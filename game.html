@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" class="crt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AeroArcade — Asteroids</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="brand">AeroArcade</div>
+    <a href="index.html">Home</a>
+    <a href="links.html">Links</a>
+    <a href="news.html">News</a>
+    <a href="game.html">Asteroids</a>
+    <span class="badge" id="hud">SCORE: 0</span>
+  </div>
+
+  <div class="hero">
+    <div class="h1">Rocket Asteroids</div>
+    <p class="p">WASD/Arrows move, Space shoot, R restart.</p>
+    <hr class="sep">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+      <label for="companySelect">Shooter company:</label>
+      <select id="companySelect"></select>
+      <button id="startBtn">Start</button>
+    </div>
+  </div>
+
+  <canvas id="c"></canvas>
+  <div class="footer">Edit rosters in <code>assets/game.js</code>.</div>
+</div>
+
+<script type="module" src="assets/game.js"></script>
+</body>
+</html>

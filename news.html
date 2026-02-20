@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="crt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AeroArcade — News</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <div class="brand">AeroArcade</div>
+    <a href="index.html">Home</a>
+    <a href="links.html">Links</a>
+    <a href="news.html">News</a>
+    <a href="game.html">Asteroids</a>
+    <span class="badge" id="status">GENERATING…</span>
+  </div>
+
+  <div class="hero">
+    <div class="h1">Global briefs: Civil + Space Defense</div>
+    <p class="p">Serverless pipeline: RSS → fetch article → extract text → key points → cite sources.</p>
+    <hr class="sep">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+      <label>Window:</label>
+      <select id="window">
+        <option value="7">Past week</option>
+        <option value="30">Past month (discoveries/highlights)</option>
+      </select>
+      <button id="refresh">Refresh</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Civil</h2>
+      <div id="civil" class="small">Loading…</div>
+    </div>
+    <div class="card">
+      <h2>Defense (space defense only)</h2>
+      <div id="defense" class="small">Loading…</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <h2>Sources used</h2>
+    <div id="sources" class="small">Loading…</div>
+  </div>
+
+  <div class="footer">Backend endpoint: <code>/.netlify/functions/newsBriefing</code></div>
+</div>
+
+<script type="module" src="assets/news-ui.js"></script>
+</body>
+</html>

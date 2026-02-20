@@ -1,0 +1,17 @@
+help me create a website to publish using Github pages
+website is all about aerospace with recent news and information
+website should have the look and feel of retro arcade
+
+have links to major established rocket companies
+have links to minor start up rocket companies
+have links to major journalists in rocket and aerospace and group by media type like youtube, X, patreon
+have links to major influencers in rocket and aerospace and group by media type like youtube, X, patreon
+have links to obscure influencers in rocket and aerospace and group by media type like youtube, X, patreon
+make sure all information is accurate and state sources
+
+sumarize a breifing for latest aerospace news from past week using backend serverless step to fetch articles extract key points and summarizes
+summarize any major discoveries in aerospace from past month
+focus on global region
+separate by space defense and civil
+
+create an arcade sytle astroid game where player can select the rocket company as shooter and other companies as astroids with a mix of space debris and asteroids

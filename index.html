@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" class="crt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AeroArcade</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">AeroArcade</div>
+      <a href="index.html">Home</a>
+      <a href="links.html">Links</a>
+      <a href="news.html">News</a>
+      <a href="game.html">Asteroids</a>
+      <span class="badge">GLOBAL / CRT</span>
+    </div>
+
+    <div class="hero">
+      <div class="h1">Aerospace intelligence in a retro arcade shell.</div>
+      <p class="p">Sourced directories, server-generated briefs (civil + space-defense), and an Asteroids game.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>News briefs</h2>
+        <p class="small">Backend fetches sources → extracts text → generates key points with citations.</p>
+      </div>
+      <div class="card">
+        <h2>Directories</h2>
+        <p class="small">Major + startup rocket orgs, plus journalists/influencers grouped by platform.</p>
+      </div>
+      <div class="card">
+        <h2>Arcade game</h2>
+        <p class="small">Pick your company ship. Shoot companies, debris, and natural asteroids.</p>
+      </div>
+    </div>
+
+    <div class="footer">Edit data: <code>assets/links-data.js</code>. Backend briefs: <code>netlify/functions/newsBriefing.js</code>.</div>
+  </div>
+</body>
+</html>
